@@ -26,5 +26,9 @@ describe('Thermostat', function() {
       temp2 = thermo.temp;
       expect(temp2 - temp1).toEqual(-1)
     });
+    it('temp cannot go lower than 10', function() {
+      spyOn(thermo, 'temp').and.returnValue(10);
+      expect(function() {thermo.down();}).toThrow(new Error("Temp too low"));
+    });
   });
 });
