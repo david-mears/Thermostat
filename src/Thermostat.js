@@ -1,7 +1,8 @@
 "use strict"
 
 function Thermostat() {
-  this.temp = 20;
+  this._default = 20;
+  this.temp = this._default;
   this._minTemp = 10;
   this.isInPowerSavingMode = true;
   this._MAX_TEMP_LOW = 25;
@@ -32,5 +33,8 @@ Thermostat.prototype.down = function() {
 
 Thermostat.prototype.switchMode = function() {
   this.isInPowerSavingMode = !this.isInPowerSavingMode;
-
 };
+
+Thermostat.prototype.reset = function() {
+  this.temp = this._default;
+}

@@ -67,7 +67,24 @@ describe('Thermostat', function() {
     it('resets temp to 20', function() {
       thermo.up()
       thermo.reset()
-      expect(thermo.temp).toEqual(this._default)
-    })
-  })
+      expect(thermo.temp).toEqual(thermo._default)
+    });
+  });
+
+  describe ('#energyUsage', function() {
+    it('returns energy usage low when under 18', function(){
+      thermo.temp = 17
+      expect(thermo.energyUsage()).toEqual('Low energy usage');
+    });
+
+    it('returns energy usage medium when under 25', function(){
+      thermo.temp = 24
+      expect(thermo.energyUsage()).toEqual('Medium energy usage');
+    });
+
+    it('returns energy usage high when 25 and over', function(){
+      thermo.temp = 26
+      expect(thermo.energyUsage()).toEqual('High energy usage');
+    });
+  });
 });
