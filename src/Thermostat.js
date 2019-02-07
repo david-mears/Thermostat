@@ -1,9 +1,9 @@
 "use strict"
 
 function Thermostat() {
-  this._default = 20;
+  this.DEFAULT = 20;
   this.temp = this._default;
-  this._minTemp = 10;
+  this.MIN_TEMP = 10;
   this.isInPowerSavingMode = true;
   this._MAX_TEMP_LOW = 25;
   this._MAX_TEMP_HIGH = 32;
