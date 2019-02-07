@@ -46,7 +46,7 @@ describe('Thermostat', function() {
       expect(temp2 - temp1).toEqual(-1)
     });
     it('temp cannot go lower than 10', function() {
-      thermo.temp = thermo._minTemp;
+      thermo.temp = thermo.MIN_TEMP;
       expect(function() {thermo.down();}).toThrow(new Error("Temp too low"));
     });
   });
@@ -67,7 +67,7 @@ describe('Thermostat', function() {
     it('resets temp to 20', function() {
       thermo.up()
       thermo.reset()
-      expect(thermo.temp).toEqual(thermo._default)
+      expect(thermo.temp).toEqual(thermo.DEFAULT)
     });
   });
 

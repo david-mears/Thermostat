@@ -2,7 +2,7 @@
 
 function Thermostat() {
   this.DEFAULT = 20;
-  this.temp = this._default;
+  this.temp = this.DEFAULT;
   this.MIN_TEMP = 10;
   this.isInPowerSavingMode = true;
   this._MAX_TEMP_LOW = 25;
@@ -25,7 +25,7 @@ Thermostat.prototype._maxTemp = function() {
 };
 
 Thermostat.prototype.down = function() {
-  if (this.temp <= this._minTemp) {
+  if (this.temp <= this.MIN_TEMP) {
     throw new Error('Temp too low')
   }
   this.temp -= 1
@@ -36,7 +36,7 @@ Thermostat.prototype.switchMode = function() {
 };
 
 Thermostat.prototype.reset = function() {
-  this.temp = this._default;
+  this.temp = this.DEFAULT;
 }
 
 Thermostat.prototype.energyUsage = function() {
