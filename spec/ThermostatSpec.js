@@ -20,8 +20,8 @@ describe('Thermostat', function() {
 
     it('temp cannot go higher than 25 when power saving mode is on', function() {
       var i;
-      for (i = this.temp; i < this.MAX_TEMP_LOW; i++){
-        thermo.up()
+      for ( i = thermo.temp; i < thermo._MAX_TEMP_LOW; i++){
+        thermo.up();
       }
       expect( function() {thermo.up();}).toThrow(new Error("Maximum temp reached"));
     });
@@ -44,5 +44,11 @@ describe('Thermostat', function() {
     it('is in power-saving mode by default', function() {
       expect(thermo.isInPowerSavingMode).toBeTruthy()
     });
+
+    it('changes the mode', function() {
+      thermo.isInPowerSavingMode = true
+      thermo.switchMode()
+      expect(thermo.isInPowerSavingMode).toBeFalsy()
+    })
   });
 });
