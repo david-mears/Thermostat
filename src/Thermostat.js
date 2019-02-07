@@ -5,6 +5,7 @@ function Thermostat() {
   this._minTemp = 10;
   this.isInPowerSavingMode = true;
   this._MAX_TEMP_LOW = 25;
+  this._MAX_TEMP_HIGH = 32;
 };
 
 Thermostat.prototype.up = function() {
@@ -12,11 +13,16 @@ Thermostat.prototype.up = function() {
     throw new Error('Maximum temp reached')
   }
   this.temp += 1
-}
+};
 
 Thermostat.prototype.down = function() {
   if (this.temp <= this._minTemp) {
     throw new Error('Temp too low')
   }
   this.temp -= 1
-}
+};
+
+Thermostat.prototype.switchMode = function() {
+  this.isInPowerSavingMode = !this.isInPowerSavingMode;
+
+};
