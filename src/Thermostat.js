@@ -9,10 +9,18 @@ function Thermostat() {
 };
 
 Thermostat.prototype.up = function() {
-  if (this.temp >= this._MAX_TEMP_LOW) {
+  if (this.temp >= this._maxTemp()) {
     throw new Error('Maximum temp reached')
   }
   this.temp += 1
+};
+
+Thermostat.prototype._maxTemp = function() {
+  if (this.isInPowerSavingMode) {
+    return this._MAX_TEMP_LOW;
+  } else {
+    return this._MAX_TEMP_HIGH;
+  };
 };
 
 Thermostat.prototype.down = function() {

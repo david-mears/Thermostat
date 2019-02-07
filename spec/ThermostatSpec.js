@@ -62,4 +62,12 @@ describe('Thermostat', function() {
       expect(thermo.isInPowerSavingMode).toBeFalsy()
     });
   });
+
+  describe ('#reset', function() {
+    it('resets temp to 20', function() {
+      thermo.up()
+      thermo.reset()
+      expect(thermo.temp).toEqual(this._default)
+    })
+  })
 });
