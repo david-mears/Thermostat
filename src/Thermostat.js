@@ -38,3 +38,16 @@ Thermostat.prototype.switchMode = function() {
 Thermostat.prototype.reset = function() {
   this.temp = this._default;
 }
+
+Thermostat.prototype.energyUsage = function() {
+  switch (true) {
+    case this.temp < 18:
+      return 'Low energy usage'
+      break;
+    case this.temp < 25:
+      return 'Medium energy usage'
+      break;
+    default:
+      return 'High energy usage'
+  }
+}
