@@ -31,4 +31,11 @@ describe('Thermostat', function() {
       expect(function() {thermo.down();}).toThrow(new Error("Temp too low"));
     });
   });
+
+
+  describe ('#switchMode', function() {
+    it('is in power-saving mode by default', function() {
+      expect(thermo.isInPowerSavingMode).toBeTruthy()
+    })
+  })
 });
