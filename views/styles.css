@@ -1,0 +1,21 @@
+body {
+    font-family: 'Major Mono Display', monospace;
+  }
+  .dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #111;
+    display: inline-block;
+  }
+  button {
+    height: 100px;
+    width: 100px;
+    border-radius: 30%;
+    margin: 5px;
+    font-size: 15;
+    font-family: 'Major Mono Display', monospace;
+  }
+  button.test {
+    font-size: 20;
+  }

@@ -1,0 +1,41 @@
+<script src="../src/Thermostat.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body align="center">
+  <script src="../jquery-3.3.1.min.js"></script>
+  <script>
+
+  $(document).ready(function() {
+    $("button").click(function(event) {
+      $("button").addClass("test");
+    });
+  });
+
+  $(document).ready(function() {
+    alert('welcome')
+  });
+  </script>
+
+  <div>
+    <p style="font-size: 50px">TEMPERATURE: 20 DEGREES</p>
+  </div>
+
+  <div id="interface">
+    <br />
+    <button id="up" style="background-color: #f53; font-size: 50px;" >+</button>
+    <button id="down" style="background-color: #59f; font-size: 50px;" >-</button><br />
+    <button id="switch" style="background-color: #5f9" >SWITCH POWER SAVING MODE</button><br />
+    <button id="reset" style="background-color: #ccc" >RESET</button>
+  </div>
+  <br />
+  <div id="psm">
+    <h2>POWER SAVING MODE</h2>
+    <span class="dot"></span>
+  </div>
+</body>
+</html>
