@@ -74,17 +74,17 @@ describe('Thermostat', function() {
   describe ('#energyUsage', function() {
     it('returns energy usage low when under 18', function(){
       thermo.temp = 17
-      expect(thermo.energyUsage()).toEqual('Low energy usage');
+      expect(thermo.energyUsage()).toEqual('low-energy');
     });
 
     it('returns energy usage medium when under 25', function(){
       thermo.temp = 24
-      expect(thermo.energyUsage()).toEqual('Medium energy usage');
+      expect(thermo.energyUsage()).toEqual('medium-energy');
     });
 
     it('returns energy usage high when 25 and over', function(){
       thermo.temp = 26
-      expect(thermo.energyUsage()).toEqual('High energy usage');
+      expect(thermo.energyUsage()).toEqual('high-energy');
     });
   });
 });

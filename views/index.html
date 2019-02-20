@@ -1,28 +1,16 @@
 <script src="../src/Thermostat.js"></script>
-
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body align="center">
   <script src="../jquery-3.3.1.min.js"></script>
-  <script>
-
-  $(document).ready(function() {
-    $("button").click(function(event) {
-      $("button").addClass("test");
-    });
-  });
-
-  $(document).ready(function() {
-    alert('welcome')
-  });
-  </script>
+  <script src="../src/interface.js"></script>
 
   <div>
-    <p style="font-size: 50px">TEMPERATURE: 20 DEGREES</p>
+    <p id="temperature" style="font-size: 50px"></p>
   </div>
 
   <div id="interface">
@@ -34,8 +22,8 @@
   </div>
   <br />
   <div id="psm">
-    <h2>POWER SAVING MODE</h2>
-    <span class="dot"></span>
+    <h2>POWER SAVING MODE ON</h2>
+    <img id="tree-icon" src="img/tree.png" alt="A tree" height="42" width="42">
   </div>
 </body>
 </html>

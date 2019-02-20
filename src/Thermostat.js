@@ -42,12 +42,12 @@ Thermostat.prototype.reset = function() {
 Thermostat.prototype.energyUsage = function() {
   switch (true) {
     case this.temp < 18:
-      return 'Low energy usage'
+      return 'low-energy'
       break;
     case this.temp < 25:
-      return 'Medium energy usage'
+      return 'medium-energy'
       break;
     default:
-      return 'High energy usage'
+      return 'high-energy'
   }
 }

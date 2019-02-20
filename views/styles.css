@@ -1,21 +1,34 @@
 body {
-    font-family: 'Major Mono Display', monospace;
-  }
-  .dot {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    background-color: #111;
-    display: inline-block;
-  }
-  button {
-    height: 100px;
-    width: 100px;
-    border-radius: 30%;
-    margin: 5px;
-    font-size: 15;
-    font-family: 'Major Mono Display', monospace;
-  }
-  button.test {
-    font-size: 20;
-  }
+  font-family: 'Roboto', 'Major Mono Display', monospace;
+  background-color: #333;
+  color: #ccc;
+}
+
+.low-energy {
+  color: #5b9;
+}
+
+.high-energy {
+  color: #f33
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #111;
+  display: inline-block;
+}
+#psm {
+  font-size: 25;
+}
+button {
+  height: 100px;
+  width: 100px;
+  border-radius: 30%;
+  margin: 5px;
+  font-size: 15;
+}
+button.test {
+  font-size: 20;
+}
